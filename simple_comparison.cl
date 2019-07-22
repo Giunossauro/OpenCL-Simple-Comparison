@@ -21,14 +21,8 @@ __kernel void simple_comparison(__global const unsigned int *vetor1, __global co
 			}
 		}
 		if (counter2 == match2) {
-			if (for1 > 0){
-				vetor3[for1 / 256] = 1;
-				counter2 = 0;
-			}
-			else {
-				vetor3[for1] = 1;
-				counter2 = 0;
-			}
+			vetor3[for1 / 256] = 1;
+			counter2 = 0;
 		}
 	}
 }
